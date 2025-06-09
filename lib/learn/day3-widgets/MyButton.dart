@@ -17,10 +17,9 @@ class MyButton extends StatelessWidget {
           const SizedBox(
             height: 50,
           ),
+          //khoa nut onPressed = null
           ElevatedButton(
-              onPressed: () {
-                print("Hello");
-              },
+              onPressed:null,
               child: Text(
                 "Click Me",
                 style: TextStyle(fontSize: 20),
@@ -42,6 +41,35 @@ class MyButton extends StatelessWidget {
           const SizedBox(
             height: 50,
           ),
+          ElevatedButton(
+            onPressed:(){
+              print("ElevatedButton");
+            },
+            onLongPress: (){
+              print("Long Pressed");
+            },
+            child: Text(
+              "Click Me",
+              style: TextStyle(fontSize: 20),
+            ),
+            style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.green,
+                foregroundColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5),
+                ),
+                padding: EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: 10,
+                ),
+                elevation: 10
+            ),
+
+          ),
+          const SizedBox(
+            height: 50,
+          ),
+
           TextButton(
               onPressed: () {
                 print("TextButton");
