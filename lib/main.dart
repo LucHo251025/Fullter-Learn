@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learn/learn/day3-widgets/MyButton.dart';
+import 'package:flutter_learn/learn/day4/MyGestures.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyButton(),
+      home: const MyGestures(),
     );
   }
 }
