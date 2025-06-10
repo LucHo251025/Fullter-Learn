@@ -24,7 +24,9 @@ class MyTextField extends StatelessWidget {
                   ),
                   filled: true,
                   fillColor: Colors.white,
+
                 ),
+                keyboardType: TextInputType.emailAddress,
               ),
               SizedBox(height: 50,),
               TextField(
@@ -35,6 +37,45 @@ class MyTextField extends StatelessWidget {
                   prefixIcon: Icon(Icons.email),
                   suffixIcon: Icon(Icons.clear),
                 ),
+              ),
+              SizedBox(height: 50,),
+              TextField(
+                decoration: InputDecoration(
+                  labelText: "Phone",
+                  hintText: "Your Phone",
+                  helperText: "Please enter a valid email ",
+                  prefixIcon: Icon(Icons.email),
+                  suffixIcon: Icon(Icons.clear),
+                ),
+                keyboardType: TextInputType.phone,
+              ),
+              SizedBox(height: 50,),
+              TextField(
+                decoration: InputDecoration(
+                  labelText: "Date of Birth",
+                  hintText: "Your Date of Birth",
+                  helperText: "Please enter a Date of Birth ",
+                  prefixIcon: Icon(Icons.email),
+                  suffixIcon: Icon(Icons.clear),
+                ),
+                keyboardType: TextInputType.datetime,
+              ),
+
+              SizedBox(height: 50,),
+              TextField(
+                obscureText: true,
+                onChanged: (value) {
+                  print(value);
+                },
+                obscuringCharacter: "*",
+                decoration: InputDecoration(
+                  labelText: "Password",
+                  hintText: "Your Date of Birth",
+                  helperText: "Please enter a Date of Birth ",
+                  prefixIcon: Icon(Icons.email),
+                  suffixIcon: Icon(Icons.clear),
+                ),
+                keyboardType: TextInputType.datetime,
               )
           ]
           )
