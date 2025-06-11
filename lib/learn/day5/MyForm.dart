@@ -36,6 +36,7 @@ class _MyFormState extends State<MyForm> {
                   onSaved: (value){
                     _name = value;
                   },
+
                 ),
                 SizedBox(
                   height: 50,
@@ -51,7 +52,12 @@ class _MyFormState extends State<MyForm> {
                         );
                       }
                     }, child: Text("Submit")),
-                    ElevatedButton(onPressed: () {}, child: Text("Reset"))
+                    ElevatedButton(onPressed: () {
+                      _formKey.currentState!.reset();
+                      setState(() {
+                        _name = null;
+                      });
+                    }, child: Text("Reset"))
                   ],
 
                 )
