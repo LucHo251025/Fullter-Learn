@@ -13,6 +13,7 @@ class _FormCheckBoxState extends State<FormCheckBox> {
   final _passwordController = TextEditingController();
   bool _obscurePassword = true;
   String? _name;
+  bool _isAgreed = false;
 
   @override
   Widget build(BuildContext context) {
@@ -165,6 +166,17 @@ class _FormCheckBoxState extends State<FormCheckBox> {
                     }
                     return null;
                   },
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                CheckboxListTile(title: Text("Dong y voi dieu khoang"),value:  _isAgreed, onChanged: (value){
+                  setState(() {
+                    _isAgreed = value!;
+                    print("Dong y: $_isAgreed");
+                  });
+                },
+                  controlAffinity: ListTileControlAffinity.leading,
                 ),
                 SizedBox(
                   height: 30,
