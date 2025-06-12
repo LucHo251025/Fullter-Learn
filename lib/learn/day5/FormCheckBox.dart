@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:intl/intl.dart';
 class FormCheckBox extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => _FormCheckBoxState();
@@ -50,6 +50,14 @@ class _FormCheckBoxState extends State<FormCheckBox> {
                     return null;
                   },
                 ),
+                SizedBox(
+                  height: 30,
+                ),
+
+                TextFormField(
+
+                ),
+
                 SizedBox(
                   height: 30,
                 ),
